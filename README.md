@@ -1,4 +1,4 @@
-# Made_It
+# Made_It ![Build Travis](https://api.travis-ci.org/AtomGrafiks/made_it.svg?branch=master)
 A powerful gem to make what you want at your place. Made_It was created to group maximum of useful methods for Rails 5+ !
 
 In first time, I create a model methods to minify model header (validations, associations, scope and co).
@@ -29,5 +29,11 @@ $ gem install made_it
 ## Contributing
 Contribution directions go here.
 
+
+## Bugs and Feedback
+
+If you discover any bugs, please describe it in the issues tracker, including Rails and MadeIt versions.
+
+Questions are better handled on StackOverflow
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
