@@ -4,3 +4,4 @@ rvm:
   - 2.3.5
   - 2.4.2
   - ruby-head
+script: 'bin/test'
