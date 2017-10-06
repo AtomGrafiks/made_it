@@ -26,9 +26,14 @@ Or install it yourself as:
 $ gem install made_it
 ```
 
-## Contributing
-Contribution directions go here.
+## Contributing [![Code Triagers Badge](https://www.codetriage.com/atomgrafiks/made_it/badges/users.svg)](https://www.codetriage.com/atomgrafiks/made_it)
+If you want contribute to Made_It, make a pull request.
 
+CODE GUIDELINES:
+ - New features should be coupled with tests.
+ - Your code respect all cops of Rubocop (except Style/LineLength).
+ - Ensure that your code blends well with ours (eg, no trailing whitespace, match indentation and coding style).
+ - Don’t modify the history file or version number
 
 ## Bugs and Feedback
 
