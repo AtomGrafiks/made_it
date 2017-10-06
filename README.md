@@ -1,4 +1,4 @@
-# Made_It ![Build Travis](https://api.travis-ci.org/AtomGrafiks/made_it.svg?branch=master)
+# Made_It ![Build Travis](https://api.travis-ci.org/AtomGrafiks/made_it.svg?branch=master) [![Gem Version](https://badge.fury.io/rb/made_it.svg)](https://badge.fury.io/rb/made_it)
 A powerful gem to make what you want at your place. Made_It was created to group maximum of useful methods for Rails 5+ !
 
 In first time, I create a model methods to minify model header (validations, associations, scope and co).
