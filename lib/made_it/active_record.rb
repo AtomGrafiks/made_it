@@ -1,10 +1,10 @@
 module MadeIt
   module ActiveRecord
     extend ActiveSupport::Concern
- 
+
     included do
     end
- 
+
     module ClassMethods
       # Helper method for has_many association with a nested through association
       # Use (in class User for example):
@@ -44,6 +44,43 @@ module MadeIt
                    source_type: klass
         end
       end
+
+      # Helper method to auto downcase without self callback declaration
+      # Use (in class User for example):
+      #   downcse_field  :first_name
+      # You can edit when process is call with `callback` with opts argument
+      #   downcse_field, :first_name, callback: :after_commit
+      def downcase_field(field, opts = {})
+        made_methods_transform_string :downcase, field, opts
+      end
+
+      # Helper method to auto upcase without self callback declaration
+      # Use (in class User for example):
+      #   upcase_field  :first_name
+      # You can edit when process is call with `callback` with opts argument
+      #   upcase_field, :first_name, callback: :after_commit
+      def upcase_field(field, opts = {})
+        made_methods_transform_string :upcase, field, opts
+      end
+
+      # Helper method to auto capitalize without self callback declaration
+      # Use (in class User for example):
+      #   capitalize_field  :first_name
+      # You can edit when process is call with `callback` with opts argument
+      #   capitalize_field, :first_name, callback: :after_commit
+      def capitalize_field(field, opts = {})
+        made_methods_transform_string :capitalize, field, opts
+      end
+
+      private
+
+      def made_methods_transform_string(method, field, opts = {})
+        opts[:callback] ||= :before_validation
+        send(opts[:callback].to_sym, -> { send(field.to_sym).send("#{method}!".to_sym) })
+      end
+      # %i[chop, squueze]. each do |method|
+      #   define_method "#{method}_field" do
+      # end
     end
   end
 end

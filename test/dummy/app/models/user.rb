@@ -4,4 +4,5 @@ class User < ApplicationRecord
   has_many_through :permissions, association_table: :permissions_relations, as: :relationable
 
   validates :login,   uniqueness: true
+  downcase_field :login
 end
